@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App Wireframe</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ec7523205b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/styling/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="conatiner">
+      <div class="weatherApp">
+        <form id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Search City"
+                autofocus="on"
+                id="city-input"
+                class="form-control"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                id="searchButton"
+                class="form-control"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Current 📍"
+                id="currentLocationButton"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </form>
+        <h1></h1>
+        <ul class="currentOverview">
+          <li id="date"></li>
+          <li id="description"></li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <span class="temp" id="temperature"></span>
+            <span class="degree"
+              ><a href="#" id="fahrenheit-link">°F </a> |
+              <a href="#" id="celsius-link">°C</a></span
+            >
+            <br />
+            <div class="weatherIcon">
+              <i class="fa-solid fa-sun"></i>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul class="weatherOverview">
+              <li>Feels like: <span id="feels-like"><span>°</li>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span>mph</li>
+              <li>Min. Temperature: <span id="min-temp"></span>°</li>
+              <li>Max. Temperature: <span id="max-temp"></span>°</li>
+            </ul>
+          </div>
+          <div class="weatherForecast">
+            <div class="row">
+              <div class="col-2">
+                <div class="weatherForecastDate">Fri</div>
+                <div class="weatherIconForecast">
+                  <i class="fa-solid fa-cloud"></i>
+                </div>
+                <div class="weatherForecastTemp">
+                  <span class="weatherForecastTempFahrenheit">51°F</span> |
+                  <span class="weatherForecastTempCelsius">10°C</span>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="weatherForecastDate">Sat</div>
+                <div class="weatherIconForecast">
+                  <i class="fa-solid fa-cloud-rain"></i>
+                </div>
+                <div class="weatherForecastTemp">
+                  <span class="weatherForecastTempFahrenheit">54°F</span> |
+                  <span class="weatherForecastTempCelsius">12°C</span>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="weatherForecastDate">Sun</div>
+                <div class="weatherIconForecast">
+                  <i class="fa-solid fa-sun"></i>
+                </div>
+                <div class="weatherForecastTemp">
+                  <span class="weatherForecastTempFahrenheit">53°F</span> |
+                  <span class="weatherForecastTempCelsius">11°C</span>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="weatherForecastDate">Mon</div>
+                <div class="weatherIconForecast">
+                  <i class="fa-solid fa-sun"></i>
+                </div>
+                <div class="weatherForecastTemp">
+                  <span class="weatherForecastTempFahrenheit">56°F</span> |
+                  <span class="weatherForecastTempCelsius">13°C</span>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="weatherForecastDate">Tues</div>
+                <div class="weatherIconForecast">
+                  <i class="fa-solid fa-cloud-sun"></i>
+                </div>
+                <div class="weatherForecastTemp">
+                  <span class="weatherForecastTempFahrenheit">54°F</span> |
+                  <span class="weatherForecastTempCelsius">12°C</span>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="weatherForecastDate">Wed</div>
+                <div class="weatherIconForecast">
+                  <i class="fa-solid fa-sun"></i>
+                </div>
+                <div class="weatherForecastTemp">
+                  <span class="weatherForecastTempFahrenheit">50°F</span> |
+                  <span class="weatherForecastTempCelsius">10°C</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/javascript/script.js"></script>
+  </body>
+</html>

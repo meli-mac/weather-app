@@ -1,0 +1,106 @@
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  background: #f8b595;
+  color: #27296d;
+}
+
+h1 {
+  font-size: 25px;
+  margin-top: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#cityInput {
+  text-align: center;
+  color: white;
+  background: #c06c84;
+  border: 3px double white;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#searchButton {
+  color: #ffffff;
+  background: #c06c84;
+  border: 3px double white;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#searchButton:hover {
+  color: #c06c84;
+  background: white;
+  border: 3px double #c06c84;
+  cursor: pointer;
+}
+
+#currentLocationButton {
+  color: #ffffff;
+  background: #c06c84;
+  border: 3px double white;
+  font-size: 1rem;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+}
+
+.weatherApp {
+  border: 4px double white;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 650px;
+  border-radius: 20px;
+  background: #f67280;
+}
+
+.currentOverview {
+  list-style: none;
+  margin-left: -30px;
+  margin-top: -10px;
+}
+
+.temp {
+  font-size: 50px;
+  margin-left: 50px;
+}
+
+.degree {
+  position: relative;
+  top: -35px;
+}
+
+.weatherIcon {
+  font-size: 50px;
+  padding-left: 150px;
+}
+
+.weatherOverview {
+  list-style: none;
+  margin-left: 30px;
+}
+
+.weatherForecast {
+  margin: 30px auto;
+}
+
+.weatherForecastDate {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.weatherIconForecast {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.weatherForecastTemp {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 13px;
+}
