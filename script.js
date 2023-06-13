@@ -19,7 +19,6 @@ function displayWeather(response) {
   document.querySelector("#max-temp").innerHTML = Math.round(
     response.data.main.temp_max
   );
-  console.log(response.data);
 }
 
 function search(city) {
