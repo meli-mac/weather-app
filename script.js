@@ -6,6 +6,12 @@ function displayWeather(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  document
+    .querySelector("#weatherIcon")
+    .setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
   document.querySelector("#feels-like").innerHTML = Math.round(
     response.data.main.feels_like
   );
