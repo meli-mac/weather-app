@@ -1,7 +1,7 @@
 body {
   font-family: "Be Vietnam Pro", sans-serif;
-  background: #f8b595;
-  color: #27296d;
+  background: #dbdbeb;
+  color: #080957;
 }
 
 h1 {
@@ -20,31 +20,31 @@ footer {
 #cityInput {
   text-align: center;
   color: white;
-  background: #c06c84;
+  background: #dbdbeb;
   border: 3px double white;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 #searchButton {
-  color: #ffffff;
-  background: #c06c84;
-  border: 3px double white;
+  color: #080957;
+  background: #dbdbeb;
+  border: 3px double #080957;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 #searchButton:hover {
-  color: #c06c84;
-  background: white;
-  border: 3px double #c06c84;
+  color: #dbdbeb;
+  background: #080957;
+  border: 3px double #dbdbeb;
   cursor: pointer;
 }
 
 #currentLocationButton {
-  color: #ffffff;
-  background: #c06c84;
-  border: 3px double white;
+  color: #080957;
+  background: #dbdbeb;
+  border: 3px double #080957;
   font-size: 1rem;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
@@ -53,12 +53,12 @@ footer {
 }
 
 .weatherApp {
-  border: 4px double white;
+  border: 6px double #080957;
   padding: 20px;
   margin: 40px auto;
   max-width: 650px;
   border-radius: 20px;
-  background: #f67280;
+  background: #7577cd;
 }
 
 .currentOverview {
@@ -75,6 +75,14 @@ footer {
 .degree {
   position: relative;
   top: -35px;
+}
+
+#fahrenheit-link {
+  color: #ff6d02;
+}
+
+#celsius-link {
+  color: #ff6d02;
 }
 
 .weatherIcon {
