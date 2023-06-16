@@ -25,6 +25,7 @@ function displayWeather(response) {
   document.querySelector("#max-temp").innerHTML = Math.round(
     response.data.main.temp_max
   );
+  fahrenheitTemperature = response.data.main.temp;
 }
 
 function search(city) {
@@ -105,9 +106,10 @@ dateElement.innerHTML = currentDate(currentTime);
 function convertToCelsius(event) {
   event.preventDefault();
   let degreeUnit = document.querySelector("#temperature");
-  let temperature = degreeUnit.innerHTML;
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
   temperature = Number(temperature);
-  degreeUnit.innerHTML = Math.round(((temperature - 32) * 5) / 9);
+  degreeUnit.innerHTML = Math.round(((fahrenheitTemperature - 32) * 5) / 9);
 }
 let degreeUnit = document.querySelector("#temperature");
 let temperature = degreeUnit.innerHTML;
@@ -119,10 +121,13 @@ celsiusLink.addEventListener("click", convertToCelsius);
 function convertToFahrenheit(event) {
   event.preventDefault();
   let degreeUnit = document.querySelector("#temperature");
-  let temperature = degreeUnit.innerHTML;
+  fahrenheitLink.classList.add("active");
+  celsiusLink.classList.remove("active");
   temperature = Number(temperature);
-  degreeUnit.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  degreeUnit.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+let fahrenheitTemperature = null;

@@ -65,7 +65,7 @@ footer {
   margin: 40px auto;
   max-width: 650px;
   border-radius: 20px;
-  background: #7577cd;
+  background: #c2cfd8;
 }
 
 .currentOverview {
@@ -84,12 +84,13 @@ footer {
   top: -35px;
 }
 
-#fahrenheit-link {
-  color: #ff6d02;
+.degree .active {
+  color: black;
+  cursor: default;
 }
 
-#celsius-link {
-  color: #ff6d02;
+.degree .active:hover {
+  text-decoration: none;
 }
 
 .weatherIcon {
