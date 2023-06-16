@@ -52,6 +52,13 @@ footer {
   border-radius: 0.375rem;
 }
 
+#currentLocationButton:hover {
+  color: #dbdbeb;
+  background: #080957;
+  border: 3px double #dbdbeb;
+  cursor: pointer;
+}
+
 .weatherApp {
   border: 6px double #080957;
   padding: 20px;
