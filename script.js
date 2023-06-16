@@ -94,9 +94,8 @@ function currentDate(time) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let seconds = time.getSeconds();
 
-  return `${day} ${month} ${date}, ${year} ${hours}:${minutes}:${seconds}`;
+  return `${day} ${month} ${date}, ${year} ${hours}:${minutes}`;
 }
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
