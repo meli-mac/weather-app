@@ -130,3 +130,30 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let fahrenheitTemperature = null;
+
+// Forecast //
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thurs", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+      <div class="weatherForecastDate">${day}</div>
+          <div class="weatherIconForecast">
+              <i class="fa-solid fa-cloud"></i>
+          </div>
+      <div class="weatherForecastTemp">
+      <span class="weatherForecastTempFahrenheit">51°F</span> |
+      <span class="weatherForecastTempCelsius">10°C</span>
+      </div>
+  `;
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+  });
+}
+
+displayForecast();
