@@ -2,7 +2,6 @@
 function getForecast(coordinates) {
   let apiKey = "49b631c45785fe73d2a88477803dea22";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -109,36 +108,6 @@ let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = currentDate(currentTime);
 
-// Converting fahrenheit to celsius //
-function convertToCelsius(event) {
-  event.preventDefault();
-  let degreeUnit = document.querySelector("#temperature");
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-  temperature = Number(temperature);
-  degreeUnit.innerHTML = Math.round(((fahrenheitTemperature - 32) * 5) / 9);
-}
-let degreeUnit = document.querySelector("#temperature");
-let temperature = degreeUnit.innerHTML;
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
-
-// Converting celsius to fahrenheit //
-
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let degreeUnit = document.querySelector("#temperature");
-  fahrenheitLink.classList.add("active");
-  celsiusLink.classList.remove("active");
-  temperature = Number(temperature);
-  degreeUnit.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-let fahrenheitTemperature = null;
-
 // Forecast //
 
 function formatForecastDay(timestamp) {
@@ -177,7 +146,6 @@ function displayForecast(response) {
   `;
       forecastHTML = forecastHTML + `</div>`;
       forecastElement.innerHTML = forecastHTML;
-      console.log(response.data.daily);
     }
   });
 }
