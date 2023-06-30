@@ -1,4 +1,4 @@
-// Search city feature //
+// Search city feature & getting coordinates for forecast //
 function getForecast(coordinates) {
   let apiKey = "49b631c45785fe73d2a88477803dea22";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
@@ -141,26 +141,43 @@ let fahrenheitTemperature = null;
 
 // Forecast //
 
+function formatForecastDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
 function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Thurs", "Fri", "Sat"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
     <div class="col-2">
-      <div class="weatherForecastDate">${day}</div>
-          <div class="weatherIconForecast">
-              <i class="fa-solid fa-cloud"></i>
-          </div>
+      <div class="weatherForecastDate">${formatForecastDay(
+        forecastDay.dt
+      )}</div>
+      <div class="weatherIconForecast">
+        <img src="http://openweathermap.org/img/wn/${
+          forecastDay.weather[0].icon
+        }@2x.png" alt="" width="50"/>
+        </div>
       <div class="weatherForecastTemp">
-      <span class="weatherForecastTempFahrenheit">51°F</span> |
-      <span class="weatherForecastTempCelsius">10°C</span>
+      <span class="weatherForecastMaxTemp">${Math.round(
+        forecastDay.temp.max
+      )}°</span> |
+      <span class="weatherForecastMinTemp">${Math.round(
+        forecastDay.temp.min
+      )}°</span>
       </div>
   `;
-    forecastHTML = forecastHTML + `</div>`;
-    forecastElement.innerHTML = forecastHTML;
+      forecastHTML = forecastHTML + `</div>`;
+      forecastElement.innerHTML = forecastHTML;
+      console.log(response.data.daily);
+    }
   });
-  console.log(response.data.daily);
 }
