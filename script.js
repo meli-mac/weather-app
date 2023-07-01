@@ -1,3 +1,16 @@
+// Switch theme button //
+function switchTheme() {
+  let body = document.querySelector("body");
+
+  if (body.classList.contains("darkTheme")) {
+    body.classList.remove("darkTheme");
+  } else {
+    body.classList.add("darkTheme");
+  }
+}
+let themeButton = document.querySelector(".themeButton");
+themeButton.addEventListener("click", switchTheme);
+
 // Search city feature & getting coordinates for forecast //
 function getForecast(coordinates) {
   let apiKey = "49b631c45785fe73d2a88477803dea22";

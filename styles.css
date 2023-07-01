@@ -1,7 +1,17 @@
 body {
   font-family: "Be Vietnam Pro", sans-serif;
-  background: #dbdbeb;
-  color: #080957;
+  background: #fff4e0;
+  color: #b46060;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  margin-bottom: -15px;
+  padding: 10px 15px;
+  border-radius: 0.375rem;
+  transition: all 200ms ease-in-out;
+  box-shadow: 5px 5px 5px rgba (0, 0, 0, 0.8);
 }
 
 h1 {
@@ -15,57 +25,79 @@ a {
 
 footer {
   text-align: center;
+  margin-top: -20px;
 }
 
 #cityInput {
   text-align: center;
-  color: white;
-  background: #dbdbeb;
-  border: 3px double white;
+  color: #b46060;
+  background: #fff4e0;
+  border: 3px double #b46060;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 #searchButton {
-  color: #080957;
-  background: #dbdbeb;
-  border: 3px double #080957;
+  color: #b46060;
+  background: #fff4e0;
+  border: 3px double #b46060;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  transition: all 200ms ease-in-out;
 }
 
 #searchButton:hover {
-  color: #dbdbeb;
-  background: #080957;
-  border: 3px double #dbdbeb;
+  color: #fff4e0;
+  background: #b46060;
+  border: 3px double #fff4e0;
   cursor: pointer;
+  transition: all 200ms ease-in-out;
 }
 
 #currentLocationButton {
-  color: #080957;
-  background: #dbdbeb;
-  border: 3px double #080957;
+  color: #b46060;
+  background: #fff4e0;
+  border: 3px double #b46060;
   font-size: 1rem;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
   padding: 0.375rem 0.75rem;
   border-radius: 0.375rem;
+  transition: all 200ms ease-in-out;
 }
 
 #currentLocationButton:hover {
-  color: #dbdbeb;
-  background: #080957;
-  border: 3px double #dbdbeb;
+  color: #fff4e0;
+  background: #b46060;
+  border: 3px double #fff4e0;
   cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.themeButton {
+  background: #ffbf9b;
+  color: #b46060;
+  font-size: 15px;
+  padding: 5px;
+  border: 3px double #b46060;
+  transition: all 200ms ease-in-out;
+}
+
+.themeButton:hover {
+  background: #b46060;
+  color: #ffbf9b;
+  cursor: pointer;
+  border: 3px double #ffbf9b;
+  transition: all 200ms ease-in-out;
 }
 
 .weatherApp {
-  border: 6px double #080957;
+  border: 6px double #b46060;
   padding: 20px;
   margin: 40px auto;
   max-width: 650px;
   border-radius: 20px;
-  background: #c2cfd8;
+  background: #ffbf9b;
 }
 
 .currentOverview {
@@ -123,4 +155,78 @@ footer {
   margin-top: 10px;
   text-align: center;
   font-size: 13px;
+}
+
+.darkTheme {
+  background: #dbdbeb;
+}
+
+.darkTheme .themeButton {
+  background: #c2cfd8;
+  color: #080957;
+  border: 3px double #080957;
+  transition: all 200ms ease-in-out;
+}
+
+.darkTheme .themeButton:hover {
+  background: #080957;
+  color: #c2cfd8;
+  border: 3px double #c2cfd8;
+  transition: all 200ms ease-in-out;
+}
+
+.darkTheme .weatherApp {
+  background: #c2cfd8;
+  color: #080957;
+  border: 6px double #080957;
+}
+
+.darkTheme #cityInput {
+  color: #080957;
+  background: #dbdbeb;
+  border: 3px double #080957;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  transition: all 200ms ease-in-out;
+}
+
+.darkTheme #searchButton {
+  color: #080957;
+  background: #dbdbeb;
+  border: 3px double #080957;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  transition: all 200ms ease-in-out;
+}
+
+.darkTheme #searchButton:hover {
+  color: #dbdbeb;
+  background: #080957;
+  border: 3px double #dbdbeb;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.darkTheme #currentLocationButton {
+  color: #080957;
+  background: #dbdbeb;
+  border: 3px double #080957;
+  font-size: 1rem;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  transition: all 200ms ease-in-out;
+}
+
+.darkTheme #currentLocationButton:hover {
+  color: #dbdbeb;
+  background: #080957;
+  border: 3px double #dbdbeb;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.darkTheme footer {
+  color: #080957;
 }
